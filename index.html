@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Character Counter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Smart Character Counter</h1>
+
+    <textarea id="my-text" rows="5" placeholder="Start typing your message..."></textarea>
+
+    <div class="info">
+        <p id="count">0/60</p>
+        <p id="remaining">60 characters remaining</p>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <h2>Limit Reached!</h2>
+        <p>You have reached the maximum character limit. Do you want to reset your text and start again?</p>
+        <button id="resetBtn">Reset</button>
+    </div>
+</div>
+
+<script src="./app.js"></script>
+
+</body>
+</html>

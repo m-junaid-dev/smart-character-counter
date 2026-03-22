@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg,#1e1e2f,#3a3a7a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+textarea{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    resize: none;
+    transition: 0.3s;
+}
+
+textarea:focus{
+    border-color: #6c63ff;
+}
+
+.error{
+    border-color: #ff4d4d;
+}
+
+@keyframes shake {
+    0%{transform: translateX(0);}
+    25%{transform: translateX(-5px);}
+    50%{transform: translateX(5px);}
+    75%{transform: translateX(-5px);}
+    100%{transform: translateX(0);}
+}
+
+.shake{
+    animation: shake 0.3s;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#count{
+    color: #555;
+}
+
+#remaining{
+    color: #28a745;
+}
+
+.warning{
+    color: #ff4d4d !important;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-box{
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn{
+    from{transform: scale(0.8);}
+    to{transform: scale(1);}
+}
+
+.modal-box h2{
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-box p{
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.modal-box button{
+    padding: 10px 20px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modal-box button:hover{
+    background: #574fd6;
+}
+
+@media(max-width:500px){
+    h1{
+        font-size: 18px;
+    }
+}
